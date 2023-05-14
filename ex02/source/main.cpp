@@ -6,7 +6,10 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 19:55:32 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/14 19:55:33 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/14 20:50:00 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <iostream>
+#include "../include/Array.class.hpp"
 
