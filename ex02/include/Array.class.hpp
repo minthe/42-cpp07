@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 20:02:52 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/15 15:00:33 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/15 15:01:59 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Array {
 		
 		unsigned int	size() const;
 		unsigned int	getSize() const;
-		void			setElement(unsigned int index, int value);
+		void			setElement(int index, int value);
 
 	private:
 		unsigned int	_size;

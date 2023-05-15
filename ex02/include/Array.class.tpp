@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 20:02:50 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/15 14:59:26 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/15 15:01:57 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ unsigned int	Array<T>::getSize() const {
 }
 
 template< typename T >
-void			Array<T>::setElement(unsigned int index, int value)
+void			Array<T>::setElement(int index, int value)
 {
 	if (index < 0 || index > _size)
 		throw std::out_of_range ("out of bounds");
