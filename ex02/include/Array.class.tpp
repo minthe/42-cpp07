@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 20:02:50 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/15 14:34:23 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/15 14:59:26 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define ARRAY_CLASS_TPP
 
 #include <exception>
-#include <ratio>
+
 template< typename T >
 Array<T>::Array() : _size(0), _element(new T[_size]) {
 	_element[0] = 0;
@@ -77,7 +77,7 @@ void			Array<T>::setElement(unsigned int index, int value)
 // OVERLOADS
 
 template< typename T >
-T&				Array<T>::operator[] (unsigned int index)
+T&				Array<T>::operator[] (int index)
 {
 	if (index < 0 || index > _size)
 		throw std::out_of_range ("out of bounds");
@@ -85,7 +85,7 @@ T&				Array<T>::operator[] (unsigned int index)
 }
 
 template< typename T > // for const values
-T&				Array<T>::operator[] (unsigned int index) const
+T&				Array<T>::operator[] (int index) const
 {
 	if (index < 0 || index > _size)
 		throw std::out_of_range ("out of bounds");
