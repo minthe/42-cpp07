@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.class.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 20:02:52 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/15 00:56:41 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/15 10:06:11 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,19 @@
 #define ARRAY_CLASS_HPP
 
 #include <iostream>
+#include <exception>
 
 template< typename T >
 class Array
 {
 	public:
 		Array<T>();
+		Array<T>(unsigned int n);
+		Array<T>(const Array<T>& src);
+		Array<T>& operator=(const Array<T>& rhs);
 		~Array<T>();
-		std::string getName() const;
 	private:
-		std::string	_name;
+		Array<T>* _array;
 };
 
 #include "Array.class.tpp"
