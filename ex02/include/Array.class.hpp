@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 20:02:52 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/15 10:43:11 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/15 12:16:04 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ class Array {
 		~Array<T>();
 
 		unsigned int	size() const;
+		T				getElement() const;
 
 	protected:
-		Array<T>*		_array;
 		unsigned int	_size;
+		T*				_element;
 
 };
 
