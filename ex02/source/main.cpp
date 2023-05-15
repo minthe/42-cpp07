@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 19:55:32 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/15 09:43:03 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/15 10:35:56 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 int	main()
 {
-	Array<int> *test = new Array<int>();
-	std::cout << test->getName() << std::endl;
+	Array<int> *test = new Array<int>(25);
+	std::cout << test->size() << std::endl;
 	delete test;
 	return 0;
 }
