@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 20:02:50 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/15 13:18:41 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/15 14:34:23 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define ARRAY_CLASS_TPP
 
 #include <exception>
+#include <ratio>
 template< typename T >
 Array<T>::Array() : _size(0), _element(new T[_size]) {
 	_element[0] = 0;
@@ -48,7 +49,7 @@ Array<T>&	Array<T>::operator=(const Array<T>& rhs) {
 		delete[] _element;
 		_element = new T[_size];
 		for (size_t i = 0; i < _size; i++)
-			_element[i] = rhs.getElement(i);
+			_element[i] = rhs[i];
 	}
 	return *this;
 }
@@ -61,17 +62,34 @@ unsigned int	Array<T>::size() const {
 // ACCESSORS
 
 template< typename T >
-T				Array<T>::getElement(const unsigned int i) const {
-	if (i > _size)
-		throw std::exception();
-	return _element[i];
-}
-
-template< typename T >
 unsigned int	Array<T>::getSize() const {
 	return _size;
 }
 
-// EXCEPTION
+template< typename T >
+void			Array<T>::setElement(unsigned int index, int value)
+{
+	if (index < 0 || index > _size)
+		throw std::out_of_range ("out of bounds");
+	_element[index] = value;
+}
+
+// OVERLOADS
+
+template< typename T >
+T&				Array<T>::operator[] (unsigned int index)
+{
+	if (index < 0 || index > _size)
+		throw std::out_of_range ("out of bounds");
+	return _element[index];
+}
+
+template< typename T > // for const values
+T&				Array<T>::operator[] (unsigned int index) const
+{
+	if (index < 0 || index > _size)
+		throw std::out_of_range ("out of bounds");
+	return _element[index];
+}
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 20:02:52 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/15 13:14:48 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/15 14:33:47 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,12 @@ class Array {
 		Array<T>& operator=(const Array<T>& rhs);
 		~Array<T>();
 
+		T& 				operator[] (unsigned int index);
+		T&				operator[] (unsigned int index) const; // for const values
+		
 		unsigned int	size() const;
-		T				getElement(const unsigned int i) const;
 		unsigned int	getSize() const;
+		void			setElement(unsigned int index, int value);
 
 	private:
 		unsigned int	_size;
