@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 19:55:32 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/15 12:34:32 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/15 13:16:38 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main()
 		std::cout << "test2: " << test2.size() << std::endl;
 		std::cout << "test3: " << test3.size() << std::endl;
 		test3 = test2;
-		std::cout << "test3: " << test3.size() << std::endl;
+		std::cout << "test3: " << test3.size() << "_element[2]: " << test3.getElement(2) << std::endl; // access element with subscript overload
 	}
 	return 0;
 }
