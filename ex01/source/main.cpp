@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 16:44:55 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/15 16:16:53 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/15 16:20:27 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ template< typename T >
 void print( T const & x ) { std::cout << x << std::endl; return; }
 
 int main() {
-  int tab[] = { 0, 1, 2, 3, 4 };  // <--- I never understood why you can't write int[] tab. Wouldn't that make more sense?
+  int tab[] = { 0, 1, 2, 3, 4 };
   Awesome tab2[5];
 
   iter( tab, 5, print<int> );
