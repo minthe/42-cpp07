@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 20:02:50 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/15 16:01:57 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/15 16:08:25 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Array<T>::~Array() {
 	// std::cout << this << ": deconstructor called" << std::endl;
 }
 
-template< typename T > // not const values
+template< typename T >
 Array<T>::Array(unsigned int n): _size(n), _element(new T[n]()) {} // T[n]() -> calls base constructor for each element
 
 template< typename T >
