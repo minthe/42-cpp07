@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
+/*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 16:44:55 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/14 18:15:15 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/15 16:16:53 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,25 +25,15 @@ class Awesome
 
 std::ostream & operator<<( std::ostream & o, Awesome const & rhs ) { o << rhs.get(); return o; }
 
-template< typename T > // const version
-void print(const T & x ) { std::cout << x << std::endl; return; }
-
+template< typename T >
+void print( T const & x ) { std::cout << x << std::endl; return; }
 
 int main() {
-	
-	try
-	{
-		int tab[] = { 0, 1, 2, 3, 4 }; 
-		Awesome tab2[5];
-		const Awesome tab3[5];
+  int tab[] = { 0, 1, 2, 3, 4 };  // <--- I never understood why you can't write int[] tab. Wouldn't that make more sense?
+  Awesome tab2[5];
 
-		::iter( tab, 5, print<int> );
-		::iter( tab2, 5, print<Awesome> ); // if len is > array, garbage/segfault
-		// ::iter( tab3, 5, print<Awesome> );
-	}
-	catch (std::exception& e)
-	{
-		std::cerr << e.what() << ": length must be > 0" << std::endl;
- 	}
-	return 0;
+  iter( tab, 5, print<int> );
+  iter( tab2, 5, print<Awesome> );
+
+  return 0;
 }
